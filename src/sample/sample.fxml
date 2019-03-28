@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.172-ea" fx:controller="sample.Controller">
+   <children>
+      <VBox alignment="CENTER" prefHeight="250.0" prefWidth="300.0">
+         <children>
+            <Label text="API Key" />
+            <TextField fx:id="apiKeyField" />
+            <Label text="Path">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="choosePathBtn" mnemonicParsing="false" onAction="#onClickChoosePath" text="Choose path" />
+            <Label fx:id="pathLabel" textFill="#018a35" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="compressBtn" alignment="CENTER" contentDisplay="CENTER" defaultButton="true" mnemonicParsing="false" onAction="#onClickCompress" prefHeight="48.0" prefWidth="170.0" text="Compress" textAlignment="CENTER">
+               <VBox.margin>
+                  <Insets top="30.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
+      </VBox>
+   </children>
+</GridPane>
