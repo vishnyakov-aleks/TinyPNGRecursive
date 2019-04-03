@@ -135,9 +135,10 @@ class Controller {
 
     private fun configuringDirectoryChooser(directoryChooser: DirectoryChooser) {
         directoryChooser.title = "Select directory with images"
-        directoryChooser.initialDirectory = if (pathLabel.text.isNullOrEmpty())
+        val lastPath = File(pathLabel.text)
+        directoryChooser.initialDirectory = if (pathLabel.text.isNullOrEmpty() || !lastPath.exists())
             File(System.getProperty("user.home"))
         else
-            File(pathLabel.text)
+            lastPath
     }
 }
